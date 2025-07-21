@@ -1,1 +1,14 @@
+-- Migración: Crear tabla de usuarios
+-- Fecha: 2023-07-21
+-- Autor: Tu Nombre
 
+BEGIN;
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+COMMIT;
